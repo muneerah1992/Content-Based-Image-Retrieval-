@@ -13,9 +13,14 @@ def browseImage():
 
     global queryImagePath
 
+    # clear old labels values
+    matchImage1.configure(image='')
+    matchImage2.configure(image='')
+    matchImage3.configure(image='')
+
     # query image path
     queryImagePath = filedialog.askopenfilename(initialdir=os.getcwd(), title="",
-                                                filetypes=(("JPG File", "*.jpg"), ("JPEG File", "*.jpeg"), ("PNG File", "*.png"), ("All Files", "*.*")))
+                                                filetypes=(("JPG File", "*.jpg"), ("JPEG File", "*.jpeg"), ("PNG File", "*.png"), ("All Files", "*.*"),("WEPB","*.webp")))
     img = Image.open(queryImagePath)
     # resize the image to fit the frame
     img.thumbnail((350, 350))
@@ -24,7 +29,7 @@ def browseImage():
     queryImagelbl.image = img
 
 
-def findMatch(desList, imagesNames, thres = 10):
+def findMatch(desList, imagesNames, thres = 9):
 
     # read the selected image
     queryImage = cv2.imread(queryImagePath,0)
