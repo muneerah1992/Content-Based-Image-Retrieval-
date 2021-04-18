@@ -1,4 +1,4 @@
-# Content-Based-Image-Retrieval
+# Content Based Image Retrieval
 
 ## Getting Started
 
@@ -22,11 +22,9 @@ pip install -r requirements.txt
 
 This will install all of the required packages we selected within the `requirements.txt` file.
 
-## Running the server
+## Running the system
 
 From within the project directory first ensure you are working using your created virtual environment.
-
-Each time you open a new terminal session, run:
 
 To run the code, execute:
 
